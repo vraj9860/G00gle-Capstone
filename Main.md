@@ -1,47 +1,47 @@
+# Project Overview
+**Project Title:** Cyclistic Data Analysis: Case Study 1  
+**Objective:** Understand the variations in bike usage patterns between annual members and casual riders, informing a strategic marketing approach to convert casual riders into annual members.
 
-Project Overview
-Project Title: Cyclistic Data Analysis: Case Study 1
-Objective: Understand the variations in bike usage patterns between annual members and casual riders, informing a strategic marketing approach to convert casual riders into annual members.
-Background
+## Background
 Cyclistic, a Chicago-based bike-share program, boasts a diverse fleet that includes reclining bikes, hand tricycles, and cargo bikes, promoting inclusivity for riders with disabilities. Despite the popularity of traditional bikes, assistive options account for about 8% of users. While leisure rides dominate, approximately 30% of users rely on Cyclistic for daily commuting. The company aims to shift its marketing focus to maximize annual memberships, known to be more profitable.
-Scenario
+
+## Scenario
 As a junior data analyst at Cyclistic, I am tasked with understanding the nuances of how annual members and casual riders utilize Cyclistic bikes. This exploration serves as a foundation for crafting a compelling marketing strategy to convert casual riders into annual members. The success of these recommendations hinges on robust data insights and professional visualizations, crucial for obtaining executive approval.
-Data Analysis Process
+
+## Data Analysis Process
 In line with the Google Data Analytics Professional Capstone, the following steps will guide the analysis:
-Step 1: Ask
-Key Task: Devise marketing tactics for converting casual riders into Cyclistic members.
-Analysis Questions:
-How do annual members and casual riders differ in their usage of Cyclistic bikes?
-What motivates casual riders to opt for Cyclistic annual memberships?
-How can Cyclistic leverage digital media to facilitate the conversion of casual riders into members?
-The focus question for this case study is:
-How do annual members and casual riders use Cyclistic bikes differently?
-Step 2: Prepare
-Data Source
-The analysis will be based on Cyclist's historical trip data, a publicly available dataset from Motivate International Inc. The dataset spans from January 2020 to December 2023, consisting of 36 files, each following the naming convention "YYYYMM-divvy-tripdata". These files encompass a wealth of information, providing a comprehensive view of bike usage trends.
 
-Data Information
-Each file contains essential details for analysis, featuring the following columns:
+### Step 1: Ask
+**Key Task:** Devise marketing tactics for converting casual riders into Cyclistic members.
+**Analysis Questions:**
+- How do annual members and casual riders differ in their usage of Cyclistic bikes?
+- What motivates casual riders to opt for Cyclistic annual memberships?
+- How can Cyclistic leverage digital media to facilitate the conversion of casual riders into members?
 
-ride_id
-rideable_type
-started_at
-ended_at
-start_station_name
-start_station_id
-end_station_name
-end_station_id
-start_lat
-start_lng
-end_lat
-end_lng
-Member_casual
+**Focus Question:** How do annual members and casual riders use Cyclistic bikes differently?
 
-Organization and Naming Convention
-The files are structured with a consistent naming convention, facilitating easy identification and retrieval. The details covered in each file provide a comprehensive set of information necessary for understanding user behavior. The analysis will involve merging and processing these files to derive insights into the differences in bike usage patterns between annual members and casual riders.
+### Step 2: Prepare
+**Data Source:** Cyclist's historical trip data, a publicly available dataset from Motivate International Inc., spanning from January 2020 to December 2023, consisting of 36 files, each following the naming convention "YYYYMM-divvy-tripdata."
 
-## Merge All FIles into One data table 
+**Data Information:**
+- ride_id
+- rideable_type
+- started_at
+- ended_at
+- start_station_name
+- start_station_id
+- end_station_name
+- end_station_id
+- start_lat
+- start_lng
+- end_lat
+- end_lng
+- Member_casual
 
+**Organization and Naming Convention:** The files are structured with a consistent naming convention, facilitating easy identification and retrieval. The analysis will involve merging and processing these files to derive insights into the differences in bike usage patterns between annual members and casual riders.
+
+### Merge All Files into One Data Table
+```sql
 DROP TABLE FINAL20
 CREATE TABLE FINAL20
 (
@@ -88,12 +88,13 @@ FROM (
 SELECT *
 FROM FINAL20
 
-Step 3: Process
+```
 
+### Step 3: Process
 
-## Data Exploration Queries
+## Data Exploration Queries 
 
-### Missing Values Analysis
+### Missing Values Analysis 
 
 ```sql
 -- Check missing values for each column in the dataset
@@ -113,10 +114,10 @@ SELECT
     COUNT(*) - COUNT(member_casual) AS member_casual
 FROM FINAL20;
 
-### Remove Duplicate rows.
 
--- Check and remove duplicate rows based on ride_id
-
+```
+## Remove Duplicate Rows.
+```
 SELECT COUNT(ride_id) - COUNT(DISTINCT ride_id) AS duplicate_rows
 FROM FINAL20;
 
@@ -126,9 +127,10 @@ WITH DuplicatesCTE AS (
     FROM FINAL20
 )
 DELETE FROM DuplicatesCTE WHERE RowNum > 1;
+```
 
-###Trip Type Distribution
-
+##Trip Type Distribution ##
+```
 SELECT COUNT(*) AS longer_than_1_day
 FROM FINAL20
 WHERE (
@@ -138,20 +140,18 @@ WHERE (
 SELECT COUNT(*) AS less_than_a_minute
 FROM FINAL20
 WHERE DATEDIFF(MINUTE, started_at, ended_at) <= 1;
+```
 
-
-###Member Type Distribution
-
+##Member Type Distribution
+```
 
 SELECT DISTINCT member_casual, COUNT(*) AS count_member_type
 FROM FINAL20
 GROUP BY member_casual;
-
-###Station Information
-
-
+```
+##Station Information
 ------------------------------------------------------------------------------------------------------
-
+```
 SELECT DISTINCT start_station_name
 FROM FINAL20
 ORDER BY start_station_name;
@@ -162,8 +162,9 @@ WHERE start_station_name IS NULL OR start_station_id IS NULL;
 
 DELETE FROM FINAL20
 WHERE start_station_name IS NULL OR start_station_id IS NULL;  -----(83583 rows affected)--------
+```
 --------------------------------------------------------------------------------------------------------
-
+```
 SELECT DISTINCT end_station_name
 FROM FINAL20
 ORDER BY end_station_name;
@@ -174,19 +175,19 @@ WHERE end_station_name IS NULL OR end_station_id IS NULL;
 
 DELETE FROM FINAL20
 WHERE end_station_name IS NULL OR end_station_id IS NULL; ------(51057 rows affected)--------
-
+```
 ------------------------------------------------------------------------------------------------------------------
-
+```
 SELECT COUNT(ride_id) AS end_loc_null
 FROM FINAL20
 WHERE end_lat IS NULL OR end_lng IS NULL;
 
 DELETE FROM FINAL20
 WHERE end_station_name IS NULL OR end_station_id IS NULL;
+```
 
-
-### Using Temp table created a column for ride length and ADD to original Table.
-
+## Using Temp table created a column for ride length and ADD to original Table.
+```
 WITH RideLengthCTE AS (
   SELECT
     ride_id,
@@ -216,10 +217,10 @@ WHERE
   a.end_lng IS NOT NULL AND
   rlc.ride_length_MIN > 1 AND
   rlc.ride_length_MIN < 1440;
-
+```
 
 ### This Is For data 2020 After I repeat this process with 2021,2022, And 2023 And Merged All Data ( DATA CLEANING)
-
+```
 CREATE TABLE All_CLEANED_DATA
 (
     ride_id NVARCHAR(50) NULL,
@@ -352,56 +353,4 @@ FROM (
 
 SELECT *
 FROM All_CLEANED_DATA
-
-Step 5: Share
-
-
-Sheet 1: Consumer Types Over the Years (Pie Chart)
-
- Visualization Overview
-
- Sheet 1 presents a comprehensive overview of the distribution between casual and member types of consumers over the four-year period. The primary visualization is a pie chart, allowing for a quick and intuitive understanding of the proportion of each consumer type in Cyclistic's user base.
-
-Key Insights  ![PIE](https://github.com/vraj9860/G00gle-Capstone/assets/141504835/cbdf3e92-601e-4fb0-b185-12cfe7861455)
-
-Yearly Comparison: The Pie Chart visualizes the percentage split between casual and member consumers for each year from the historical data (Jan 2022 to Dec 2022).
-Overall Trend: Observe the overall trend in the composition of consumer types, highlighting any shifts or consistent patterns over the years.
-
-Interpretation
-
- The pie chart provides a clear and visually appealing representation of the consumer landscape, aiding in the identification of any significant changes in the distribution of casual and member consumers over the analyzed period.
-
- Sheet 2: Trend Line Usage of Different Cycle Types
-
- Visualization Overview
-
- Sheet 2 delves into the usage patterns of different cycle types by casual and member consumers over the four-year period. The primary visualization is a trend line chart, allowing for a detailed analysis of how usage trends have evolved for various cycle types.
-
-
-
- Key Insights
-
-
-Cycle Type Trends: The Trend Line chart illustrates the usage trends of distinct cycle types (e.g., reclining bikes, hand tricycles, cargo bikes) by both casual and member consumers.
-Annual Patterns: Identify any annual patterns or fluctuations in the usage of different cycle types, providing insights into the popularity and seasonality of specific bikes.
-Interpretation
-
- The trend line chart offers a dynamic view of the changing preferences and usage patterns of cycle types, facilitating a nuanced understanding of how each type resonates with casual and member consumers over the years.
-
- Sheet 3: Preference of Cycles by Different Consumer Types
-
- Visualization Overview
-
- Sheet 3 explores the preference of cycle types by different consumer types (casual and member). The primary visualization is a stacked bar chart, providing a detailed breakdown of the proportion of cycle types preferred by each consumer category.
-
- Key Insights
-
-
-Stacked Representation: The stacked bar chart visually represents the distribution of cycle types preferred by casual and member consumers side by side.
-Relative Preferences: Identify the relative popularity of each cycle type within the casual and member consumer segments.
-
-
-
-Interpretation
-
- The stacked bar chart enables a nuanced analysis of consumer preferences, offering insights into the specific types of cycles that attract casual and member consumers. This information is crucial for tailoring marketing strategies and enhancing the overall user experience.
+```
