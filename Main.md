@@ -359,6 +359,7 @@ FROM All_CLEANED_DATA
 ## Sheet 1: Consumer Types Over the Years (Pie Chart)
 
 ### Visualization Overview
+<https://public.tableau.com/app/profile/vraj.patel1693/viz/capstone_17052053500760/Dashboard1>
 
 Sheet 1 presents a comprehensive overview of the distribution between casual and member types of consumers over the four-year period. The primary visualization is a pie chart, allowing for a quick and intuitive understanding of the proportion of each consumer type in Cyclistic's user base.
 
