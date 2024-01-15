@@ -50,7 +50,7 @@ The analysis aims to answer the following question:
 
 ## License
 
-This project is licensed under this license
+This project is licensed under this <https://divvybikes.com/data-license-agreement>
 
 
 
