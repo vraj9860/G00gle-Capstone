@@ -354,3 +354,53 @@ FROM (
 SELECT *
 FROM All_CLEANED_DATA
 ```
+##Step 5: Share
+
+## Sheet 1: Consumer Types Over the Years (Pie Chart)
+
+### Visualization Overview
+
+Sheet 1 presents a comprehensive overview of the distribution between casual and member types of consumers over the four-year period. The primary visualization is a pie chart, allowing for a quick and intuitive understanding of the proportion of each consumer type in Cyclistic's user base.
+
+### Key Insights
+
+- **Yearly Comparison:** The Pie Chart visualizes the percentage split between casual and member consumers for each year from the historical data (Jan 2022 to Dec 2022).
+- **Overall Trend:** Observe the overall trend in the composition of consumer types, highlighting any shifts or consistent patterns over the years.
+
+
+![PIE](https://github.com/vraj9860/G00gle-Capstone/assets/141504835/63e8ef9a-aeaa-4be5-9312-fa1d947a3518)
+
+# Interpretation
+The pie chart provides a clear and visually appealing representation of the consumer landscape, aiding in the identification of any significant changes in the distribution of casual and member consumers over the analyzed period.
+
+## Sheet 2: Trend Line Usage of Different Cycle Types
+
+### Visualization Overview
+
+Sheet 2 delves into the usage patterns of different cycle types by casual and member consumers over the four-year period. The primary visualization is a trend line chart, allowing for a detailed analysis of how usage trends have evolved for various cycle types.
+
+### Key Insights
+
+- **Cycle Type Trends:** The Trend Line chart illustrates the usage trends of distinct cycle types (e.g., reclining bikes, hand tricycles, cargo bikes) by both casual and member consumers.
+- **Annual Patterns:** Identify any annual patterns or fluctuations in the usage of different cycle types, providing insights into the popularity and seasonality of specific bikes.
+
+### Interpretation
+
+The trend line chart offers a dynamic view of the changing preferences and usage patterns of cycle types, facilitating a nuanced understanding of how each type resonates with casual and member consumers over the years.
+
+## Sheet 3: Preference of Cycles by Different Consumer Types
+
+### Visualization Overview
+
+Sheet 3 explores the preference of cycle types by different consumer types (casual and member). The primary visualization is a stacked bar chart, providing a detailed breakdown of the proportion of cycle types preferred by each consumer category.
+
+### Key Insights
+
+- **Stacked Representation:** The stacked bar chart visually represents the distribution of cycle types preferred by casual and member consumers side by side.
+- **Relative Preferences:** Identify the relative popularity of each cycle type within the casual and member consumer segments.
+
+### Interpretation
+
+The stacked bar chart enables a nuanced analysis of consumer preferences, offering insights into the specific types of cycles that attract casual and member consumers. This information is crucial for tailoring marketing strategies and enhancing the overall user experience.
+
+
