@@ -1,4 +1,4 @@
-# G00gle-Capstone
+
 # Cyclistic Marketing Analysis
 
 ## Introduction
