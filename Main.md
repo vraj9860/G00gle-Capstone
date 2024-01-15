@@ -384,6 +384,9 @@ Sheet 2 delves into the usage patterns of different cycle types by casual and me
 - **Cycle Type Trends:** The Trend Line chart illustrates the usage trends of distinct cycle types (e.g., reclining bikes, hand tricycles, cargo bikes) by both casual and member consumers.
 - **Annual Patterns:** Identify any annual patterns or fluctuations in the usage of different cycle types, providing insights into the popularity and seasonality of specific bikes.
 
+![LINE](https://github.com/vraj9860/G00gle-Capstone/assets/141504835/85c294c6-0fb2-4aab-a574-0e9aeae47f3e)
+
+
 ### Interpretation
 
 The trend line chart offers a dynamic view of the changing preferences and usage patterns of cycle types, facilitating a nuanced understanding of how each type resonates with casual and member consumers over the years.
@@ -398,6 +401,9 @@ Sheet 3 explores the preference of cycle types by different consumer types (casu
 
 - **Stacked Representation:** The stacked bar chart visually represents the distribution of cycle types preferred by casual and member consumers side by side.
 - **Relative Preferences:** Identify the relative popularity of each cycle type within the casual and member consumer segments.
+
+  ![BAR](https://github.com/vraj9860/G00gle-Capstone/assets/141504835/86e4b1ed-f013-4219-b008-64e82f76e33c)
+
 
 ### Interpretation
 
