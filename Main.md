@@ -90,7 +90,7 @@ FROM FINAL20
 
 ```
 
-### Step 3: Process
+## Step 3: Process
 
 ## Data Exploration Queries 
 
