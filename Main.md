@@ -362,8 +362,7 @@ Sheet 1: Consumer Types Over the Years (Pie Chart)
 
  Sheet 1 presents a comprehensive overview of the distribution between casual and member types of consumers over the four-year period. The primary visualization is a pie chart, allowing for a quick and intuitive understanding of the proportion of each consumer type in Cyclistic's user base.
 
- Key Insights  ![PIE](https://raw.githubusercontent.com/vraj9860/G00gle-Capstone/main/assets/141504835/cbdf3e92-601e-4fb0-b185-12cfe7861455.png)
-
+Key Insights  ![PIE](https://github.com/vraj9860/G00gle-Capstone/assets/141504835/cbdf3e92-601e-4fb0-b185-12cfe7861455)
 
 Yearly Comparison: The Pie Chart visualizes the percentage split between casual and member consumers for each year from the historical data (Jan 2022 to Dec 2022).
 Overall Trend: Observe the overall trend in the composition of consumer types, highlighting any shifts or consistent patterns over the years.
