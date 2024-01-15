@@ -409,4 +409,31 @@ Sheet 3 explores the preference of cycle types by different consumer types (casu
 
 The stacked bar chart enables a nuanced analysis of consumer preferences, offering insights into the specific types of cycles that attract casual and member consumers. This information is crucial for tailoring marketing strategies and enhancing the overall user experience.
 
+# KEY FINDINGS
+
+1. **TRIP DURATION**
+
+   The data shows that annual members tend to have shorter trip durations, with a significant portion of their rides lasting between 15 to 30 minutes. Annual members mainly use the bikes for quick and convenient commuting or short leisure rides.
+
+   For casual riders, a significant percentage of their journeys last more than 30 minutes, indicating that the bikes are more likely to be used for leisurely exploration or longer recreational outings.
+
+2. **TRIP PATTERN**
+
+   - **Annual Members:**
+     During regular commuting hours (early morning and late afternoon), there is a noticeable pattern of increased bike utilization. This validates the assumption that the majority of annual members travel to work on bicycles.
+
+   - **Casual Riders:**
+     Throughout the day, casual riders use the system more irregularly, with a noticeable peak in the late morning and early afternoon. This implies that casual riders may be using their bikes for leisure activities, including going on trips or running errands.
+
+# IMPLEMENTING STRATEGY
+
+## Targeted Marketing Campaigns:
+
+Design specialized annual membership promotions that highlight the benefits of time-saving and convenience for people who commute every day. Promote bikes with an emphasis on their versatility and adaptability for leisure and adventure to target casual riders.
+
+## Campaigns for Digital Media:
+
+Adapt digital media campaigns to the discovered usage trends. Encourage yearly memberships, for instance, through channels targeted at commuters. Make use of eye-catching content that highlights the many uses of bikes for non-riders, enticing people to think about memberships for their various requirements.
+
+
 
